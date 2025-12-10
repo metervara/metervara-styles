@@ -1,0 +1,12 @@
+# node modules (in case someone installs deps in this folder)
+node_modules/
+
+# macOS Finder noise
+.DS_Store
+
+# editor folders
+.vscode/
+.idea/
+
+# log files (rare, but safe)
+*.log
