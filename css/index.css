@@ -1,0 +1,64 @@
+
+@import "./core/color.css";
+@import "./core/typography.css";
+@import "./core/spacing.css";
+
+@import "./themes/metervara.css";
+
+@import "./cursors/core.css";
+@import "./cursors/metervara.css";
+
+/* Specific theme styles */
+
+button.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--mv-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+
+button.link-button:hover {
+  color: var(--mv-link-color-hover);
+}
+
+button.link-button:active {
+  color: var(--mv-link-color-active);
+}
+
+button.link-button:visited {
+  color: var(--mv-link-color-visited);
+}
+
+a.is-visited {
+  text-decoration: line-through;
+}
+
+hr {
+  border: 0;
+  height: var(--mv-dash-thickness);
+  background: repeating-linear-gradient(90deg, var(--mv-color-dash-1) 0 var(--mv-dash-width), var(--mv-color-dash-2) var(--mv-dash-width) calc(2 * var(--mv-dash-width)));
+}
+
+svg.zigzag {
+  width: 90vw;
+  margin-inline: auto;
+  aspect-ratio: 20 / 1;
+  height: auto;
+  display: block; /* avoid baseline gap from inline SVG */
+}
+
+svg.zigzag polygon.zig {
+  fill: var(--mv-color-dash-1);
+}
+
+svg.zigzag polygon.zag {
+  fill: var(--mv-color-dash-2);
+}
+@media (max-width: 479px) {
+  svg.zigzag {
+    width: calc(100% - 2 * var(--mv-space-3));
+  }
+}

@@ -1,0 +1,66 @@
+:root {
+  --mv-color-bg: #ffffff;
+  --mv-color-fg: #000000;
+
+  --mv-color-accent-1-bg: #ffffff;
+  --mv-color-accent-1-fg: #000000;
+
+  --mv-color-accent-2-bg: #ffffff;
+  --mv-color-accent-2-fg: #000000;
+
+  --mv-color-accent-3-bg: #ffffff;
+  --mv-color-accent-3-fg: #000000;
+
+  --mv-color-muted: #555555;
+
+  --mv-link-color: var(--mv-color-fg);
+  --mv-link-color-hover: var(--mv-link-color);
+  --mv-link-color-active: var(--mv-link-color);
+  --mv-link-color-visited: var(--mv-link-color);
+
+  --mv-color-dash-1: var(--mv-color-accent-1-bg);
+  --mv-color-dash-2: var(--mv-color-accent-2-bg);
+
+  color-scheme: light dark;
+}
+
+html {
+  background-color: var(--mv-color-bg);
+}
+
+body {
+  background-color: var(--mv-color-bg);
+  color: var(--mv-color-fg);
+}
+
+a { 
+  color: var(--mv-link-color);
+}
+
+a:hover {
+  color: var(--mv-link-color-hover);
+}
+
+a:active {
+  color: var(--mv-link-color-active);
+}
+
+a:visited {
+  color: var(--mv-link-color-visited);
+}
+
+mark {
+  background-color: var(--mv-color-accent-1-bg);
+  color: var(--mv-color-accent-1-fg);
+  padding-inline: 0.2em; 
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+code {
+  background-color: var(--mv-color-accent-2-bg);
+  color: var(--mv-color-accent-2-fg);
+  padding-inline: 0.2em; 
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

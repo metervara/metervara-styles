@@ -1,0 +1,24 @@
+:root {
+  --mv-cursor-default: auto;
+  --mv-cursor-pointer: pointer;
+  --mv-cursor-text: text;
+}
+
+[data-cursor-scope] {
+  cursor: var(--mv-cursor-default);
+}
+
+[data-cursor-scope] a,
+[data-cursor-scope] button,
+[data-cursor-scope] [role="button"],
+[data-cursor-scope] input[type="button"],
+[data-cursor-scope] input[type="submit"] {
+  cursor: var(--mv-cursor-pointer);
+}
+
+[data-cursor-scope] input[type="text"],
+[data-cursor-scope] input[type="search"],
+[data-cursor-scope] textarea,
+[data-cursor-scope] [contenteditable="true"] {
+  cursor: var(--mv-cursor-text);
+}

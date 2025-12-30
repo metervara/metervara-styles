@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="metervara" data-cursor="metervara">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Metervara Styles</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script>
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest("a");
+        if (!link) return;
+
+        link.classList.add("is-visited");
+      });
+
+      function clearMode() {
+        document.documentElement.removeAttribute("data-theme-mode");
+      }
+      function setMode(mode) {
+        document.documentElement.setAttribute("data-theme-mode", mode);
+      }
+    </script>
+  </head>
+
+  <!-- data-cursor-scope activates custom cursor behavior inside -->
+  <body data-cursor-scope>
+    <header>
+      <h1>Metervara styles.</h1>
+    </header>
+    <svg
+      class="zigzag"
+      viewBox="0 0 400 20"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern
+          id="zig-pattern"
+          patternUnits="userSpaceOnUse"
+          width="40"
+          height="20"
+        >
+          <!-- zig -->
+          <polygon
+            points="0,10 20,0 20,10 0,20"
+            class="zig"
+          />
+          <polygon
+            points="20,0 40,10 40,20 20,10"
+            class="zag"
+          />
+        </pattern>
+      </defs>
+      <rect width="400" height="20" fill="url(#zig-pattern)" />
+    </svg>
+    <main id="app">
+      <section class="demo-section mv-stack">
+        <h2 class="eyebrow" id="default-theme">Default Theme.</h2>
+        <p>
+          This section uses the default theme from <code>&lt;html&gt;</code>. Highlighted text is <mark>highlighted like so</mark>.
+        </p>
+        <p>
+          You can <button type="button" class="link-button" onclick="javascript:clearMode();">clear mode overrides</button> or force
+          <button type="button" class="link-button" onclick="javascript:setMode('light');">light mode</button> or
+          <button type="button" class="link-button" onclick="javascript:setMode('dark');">dark mode</button> to see how each mode looks.
+        </p>
+
+        <p class="mv-text-mono">
+          Mono sample: <code>IBM Plex Mono</code> is in use here.
+        </p>
+      </section>
+
+      <section data-theme-mode="light">
+        <h2 class="eyebrow" id="light-mode-override">Light Mode Override.</h2>
+        <p>
+          This section overrides the theme mode to
+          <code>data-theme-mode="light"</code>.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+
+      <section data-theme-mode="dark">
+        <h2 class="eyebrow" id="dark-mode-override">Dark Mode Override.</h2>
+        <p>
+          This section overrides the theme mode to
+          <code>data-theme-mode="dark"</code>.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+    </main>
+    <svg
+      class="zigzag"
+      viewBox="0 0 400 20"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern
+          id="zig-pattern"
+          patternUnits="userSpaceOnUse"
+          width="40"
+          height="20"
+        >
+          <!-- zig -->
+          <polygon
+            points="0,10 20,0 20,10 0,20"
+            class="zig"
+          />
+          <polygon
+            points="20,0 40,10 40,20 20,10"
+            class="zag"
+          />
+        </pattern>
+      </defs>
+      <rect width="400" height="20" fill="url(#zig-pattern)" />
+    </svg>
+    <footer>
+      <p>This is the footer</p>
+    </footer>
+  </body>
+</html>

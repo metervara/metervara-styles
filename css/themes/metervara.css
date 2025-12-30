@@ -1,0 +1,110 @@
+[data-theme="metervara"] {
+  /* Light mode theme variables */
+  --mv-metervara-color-bg-light: #fff5eb; /* #F2F1E6; */
+  --mv-metervara-color-fg-light: #000066;
+  
+  --mv-metervara-color-accent-1-bg-light: #fde9a7;
+  --mv-metervara-color-accent-1-fg-light: var(--mv-metervara-color-fg-light);
+  --mv-metervara-color-accent-2-bg-light: #b7fcdc;
+  --mv-metervara-color-accent-2-fg-light: var(--mv-metervara-color-fg-light);
+  --mv-metervara-color-accent-3-bg-light: #ffc9c9;
+  --mv-metervara-color-accent-3-fg-light: var(--mv-metervara-color-fg-light);
+  --mv-metervara-color-muted-light: #7777ff;
+  --mv-metervara-link-color-light: #0000ff; /* #5733ce; */
+
+  --mv-metervara-color-dash-1-light: #4e529a; /*#9248f2 */
+  --mv-metervara-color-dash-2-light: #ff5353; /* #f03f3f */
+
+  /* Dark mode theme variables */
+  --mv-metervara-color-bg-dark: #0000aa; /* #130032; */
+  --mv-metervara-color-fg-dark: #ffffff;
+  
+  --mv-metervara-color-accent-1-bg-dark: #0000ff;
+  --mv-metervara-color-accent-1-fg-dark: #ffff00;
+  --mv-metervara-color-accent-2-bg-dark: #0000ff;
+  --mv-metervara-color-accent-2-fg-dark: #70ffe7;
+  --mv-metervara-color-accent-3-bg-dark: #0000ff;
+  --mv-metervara-color-accent-3-fg-dark: #ffffff; /* #ffd0ce; */
+  --mv-metervara-color-muted-dark: #7777ff;
+  --mv-metervara-link-color-dark: #70ffe7;
+
+  --mv-metervara-color-dash-1-dark: #5d5dff; /* #4a4afc */
+  --mv-metervara-color-dash-2-dark: #fa716f; /* #70ffe7 */
+
+  /* Font families */
+  --mv-metervara-font-family-sans: "IBM Plex Sans",
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mv-metervara-font-family-mono: "IBM Plex Mono",
+    SFMono-Regular, Menlo, ui-monospace, monospace;
+
+  --mv-font-family-sans: var(--mv-metervara-font-family-sans);
+  --mv-font-family-mono: var(--mv-metervara-font-family-mono);
+
+  color-scheme: light dark;
+}
+
+/* Default to light mode */
+[data-theme="metervara"] {
+  --mv-color-bg: var(--mv-metervara-color-bg-light);
+  --mv-color-fg: var(--mv-metervara-color-fg-light);
+  --mv-color-accent-1-bg: var(--mv-metervara-color-accent-1-bg-light);
+  --mv-color-accent-1-fg: var(--mv-metervara-color-accent-1-fg-light);
+  --mv-color-accent-2-bg: var(--mv-metervara-color-accent-2-bg-light);
+  --mv-color-accent-2-fg: var(--mv-metervara-color-accent-2-fg-light);
+  --mv-color-accent-3-bg: var(--mv-metervara-color-accent-3-bg-light);
+  --mv-color-accent-3-fg: var(--mv-metervara-color-accent-3-fg-light);
+  --mv-color-muted: var(--mv-metervara-color-muted-light);
+  --mv-link-color: var(--mv-metervara-link-color-light);
+  --mv-color-dash-1: var(--mv-metervara-color-dash-1-light);
+  --mv-color-dash-2: var(--mv-metervara-color-dash-2-light);
+}
+
+/* Explicit light mode */
+[data-theme="metervara"][data-theme-mode="light"] {
+  --mv-color-bg: var(--mv-metervara-color-bg-light);
+  --mv-color-fg: var(--mv-metervara-color-fg-light);
+  --mv-color-accent-1-bg: var(--mv-metervara-color-accent-1-bg-light);
+  --mv-color-accent-1-fg: var(--mv-metervara-color-accent-1-fg-light);
+  --mv-color-accent-2-bg: var(--mv-metervara-color-accent-2-bg-light);
+  --mv-color-accent-2-fg: var(--mv-metervara-color-accent-2-fg-light);
+  --mv-color-accent-3-bg: var(--mv-metervara-color-accent-3-bg-light);
+  --mv-color-accent-3-fg: var(--mv-metervara-color-accent-3-fg-light);
+  --mv-color-muted: var(--mv-metervara-color-muted-light);
+  --mv-link-color: var(--mv-metervara-link-color-light);
+  --mv-color-dash-1: var(--mv-metervara-color-dash-1-light);
+  --mv-color-dash-2: var(--mv-metervara-color-dash-2-light);
+}
+
+/* Dark mode via media query */
+@media (prefers-color-scheme: dark) {
+  [data-theme="metervara"]:not([data-theme-mode="light"]) {
+    --mv-color-bg: var(--mv-metervara-color-bg-dark);
+    --mv-color-fg: var(--mv-metervara-color-fg-dark);
+    --mv-color-accent-1-bg: var(--mv-metervara-color-accent-1-bg-dark);
+    --mv-color-accent-1-fg: var(--mv-metervara-color-accent-1-fg-dark);
+    --mv-color-accent-2-bg: var(--mv-metervara-color-accent-2-bg-dark);
+    --mv-color-accent-2-fg: var(--mv-metervara-color-accent-2-fg-dark);
+    --mv-color-accent-3-bg: var(--mv-metervara-color-accent-3-bg-dark);
+    --mv-color-accent-3-fg: var(--mv-metervara-color-accent-3-fg-dark);
+    --mv-color-muted: var(--mv-metervara-color-muted-dark);
+    --mv-link-color: var(--mv-metervara-link-color-dark);
+    --mv-color-dash-1: var(--mv-metervara-color-dash-1-dark);
+    --mv-color-dash-2: var(--mv-metervara-color-dash-2-dark);
+  }
+}
+
+/* Explicit dark mode */
+[data-theme="metervara"][data-theme-mode="dark"] {
+  --mv-color-bg: var(--mv-metervara-color-bg-dark);
+  --mv-color-fg: var(--mv-metervara-color-fg-dark);
+  --mv-color-accent-1-bg: var(--mv-metervara-color-accent-1-bg-dark);
+  --mv-color-accent-1-fg: var(--mv-metervara-color-accent-1-fg-dark);
+  --mv-color-accent-2-bg: var(--mv-metervara-color-accent-2-bg-dark);
+  --mv-color-accent-2-fg: var(--mv-metervara-color-accent-2-fg-dark);
+  --mv-color-accent-3-bg: var(--mv-metervara-color-accent-3-bg-dark);
+  --mv-color-accent-3-fg: var(--mv-metervara-color-accent-3-fg-dark);
+  --mv-color-muted: var(--mv-metervara-color-muted-dark);
+  --mv-link-color: var(--mv-metervara-link-color-dark);
+  --mv-color-dash-1: var(--mv-metervara-color-dash-1-dark);
+  --mv-color-dash-2: var(--mv-metervara-color-dash-2-dark);
+}

@@ -1,0 +1,90 @@
+:root {
+  
+  --mv-space-1: 1vw;
+  --mv-space-2: 2vw;
+  --mv-space-3: 3vw;
+  --mv-space-4: 4vw;
+  --mv-space-5: 5vw;
+  --mv-space-6: 6vw;
+  --mv-space-7: 7vw;
+  --mv-space-8: 8vw;
+  --mv-space-9: 9vw;
+  --mv-space-10: 10vw;
+
+  --mv-dash-thickness: 2vw;
+  --mv-dash-width: 5vw;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header,
+main,
+footer {
+  width: 80vw;
+  margin-inline: auto;
+}
+
+header {
+  padding-block-start: calc(3 * var(--mv-space-4));
+  padding-block-end: calc(2 * var(--mv-space-4));
+}
+
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mv-space-7);
+  padding-block-start: var(--mv-space-7);
+  padding-block-end: var(--mv-space-7);
+}
+
+hr {
+  width: 90vw;
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: var(--mv-space-3);
+}
+
+section p:last-child {
+  margin-block-end: 0;
+}
+
+.eyebrow {
+  margin-block-end: var(--mv-space-2);
+}
+
+/* Media queries */
+
+@media (max-width: 479px) {
+  header,
+  main,
+  footer {
+    width: 100%;
+    padding-inline: var(--mv-space-3);
+  }
+
+  hr {
+    width: calc(100% - 2 * var(--mv-space-3));
+  }
+}

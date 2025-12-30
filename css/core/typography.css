@@ -1,0 +1,70 @@
+:root {
+  --mv-font-family-sans: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --mv-font-family-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --mv-font-size-root: 3.5vw;
+  --mv-font-size-small: 2vw;
+  --mv-font-size-headline-small: 8vw;
+  --mv-font-size-headline-large: 12vw;
+
+  --mv-line-height-base: 1.4;
+  --mv-line-height-headline-small: 1.2;
+  --mv-line-height-headline-large: 1.1;
+}
+
+@media (max-width: 768px) {
+  :root,
+  [data-theme] {
+    --mv-font-size-small: 2.5vw;
+  }
+}
+
+@media (max-width: 579px) {
+  :root,
+  [data-theme] {
+    --mv-font-size-small: 3vw;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--mv-font-family-sans);
+  font-size: var(--mv-font-size-root);
+  line-height: var(--mv-line-height-base);
+}
+
+h1 {
+  font-size: var(--mv-font-size-headline-large);
+  line-height: var(--mv-line-height-headline-large);
+  font-weight: 600;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--mv-font-size-headline-small);
+  line-height: var(--mv-line-height-headline-small);
+  font-weight: 400;
+}
+
+p {
+  font-size: var(--mv-font-size-root);
+  line-height: var(--mv-line-height-base);
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-size: var(--mv-font-size-small);
+  line-height: var(--mv-line-height-small);
+  font-weight: 600;
+}
+
+.mv-text-mono {
+  font-family: var(--mv-font-family-mono);
+}
