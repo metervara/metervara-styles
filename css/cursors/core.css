@@ -5,7 +5,17 @@
 }
 
 [data-cursor-scope] {
-  cursor: var(--mv-cursor-default);
+  cursor: var(--mv-cursor-default, auto);
+}
+
+[data-cursor-scope] p,
+[data-cursor-scope] span,
+[data-cursor-scope] li,
+[data-cursor-scope] em,
+[data-cursor-scope] strong,
+[data-cursor-scope] mark,
+[data-cursor-scope] code {
+  cursor: var(--mv-cursor-text, text);
 }
 
 [data-cursor-scope] a,

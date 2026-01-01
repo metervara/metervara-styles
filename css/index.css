@@ -16,7 +16,6 @@ button.link-button {
   padding: 0;
   color: var(--mv-link-color);
   text-decoration: underline;
-  cursor: pointer;
   font: inherit;
 }
 

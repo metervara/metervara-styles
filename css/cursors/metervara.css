@@ -1,12 +1,11 @@
 /* Cursor theme for Metervara using data attribute */
 
 [data-cursor="metervara"] {
+  /* --mv-cursor-default: url("../../assets/cursors/arrow.svg") 1 1, auto;
+  --mv-cursor-pointer: url("../../assets/cursors/pointer.svg") 5 4, pointer;
+  --mv-cursor-text: url("../../assets/cursors/ibeam.svg") 6.5 18.5, text; */
+
   --mv-cursor-default: auto;
   --mv-cursor-pointer: pointer;
   --mv-cursor-text: text;
-  /*
-  --mv-cursor-default: url("../../assets/cursors/metervara-default-md.svg") 0 0, auto;
-  --mv-cursor-pointer: url("../../assets/cursors/metervara-pointer-md.svg") 0 0, pointer;
-  --mv-cursor-text:    url("../../assets/cursors/metervara-text-md.svg") 0 0, text;
-  */
 }
