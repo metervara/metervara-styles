@@ -21,20 +21,23 @@
   --mv-color-dash-1: var(--mv-color-accent-1-bg);
   --mv-color-dash-2: var(--mv-color-accent-2-bg);
 
-  color-scheme: light dark;
-}
+  --mv-transition-duration: 0.5s;
+  --mv-transition-timing-function: ease;
 
-html {
-  background-color: var(--mv-color-bg);
+  color-scheme: light dark;
 }
 
 body {
   background-color: var(--mv-color-bg);
   color: var(--mv-color-fg);
+  
+  transition: background-color var(--mv-transition-duration) var(--mv-transition-timing-function), color var(--mv-transition-duration) var(--mv-transition-timing-function);
 }
 
 a { 
   color: var(--mv-link-color);
+
+  transition: background-color var(--mv-transition-duration) var(--mv-transition-timing-function), color var(--mv-transition-duration) var(--mv-transition-timing-function);
 }
 
 a:hover {
@@ -55,6 +58,8 @@ mark {
   padding-inline: 0.2em; 
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  
+  transition: background-color var(--mv-transition-duration) var(--mv-transition-timing-function), color var(--mv-transition-duration) var(--mv-transition-timing-function);
 }
 
 code {
@@ -63,4 +68,6 @@ code {
   padding-inline: 0.2em; 
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+
+  transition: background-color var(--mv-transition-duration) var(--mv-transition-timing-function), color var(--mv-transition-duration) var(--mv-transition-timing-function);
 }

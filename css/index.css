@@ -9,7 +9,7 @@
 @import "./cursors/metervara.css";
 
 /* Specific theme styles */
-
+/* TODO: Move to a separate file */
 button.link-button {
   background: none;
   border: none;
@@ -17,6 +17,8 @@ button.link-button {
   color: var(--mv-link-color);
   text-decoration: underline;
   font: inherit;
+  
+  transition: background-color var(--mv-transition-duration) var(--mv-transition-timing-function), color var(--mv-transition-duration) var(--mv-transition-timing-function);
 }
 
 button.link-button:hover {
@@ -47,6 +49,10 @@ svg.zigzag {
   aspect-ratio: 20 / 1;
   height: auto;
   display: block; /* avoid baseline gap from inline SVG */
+}
+
+svg.zigzag polygon {
+  transition: fill var(--mv-transition-duration) var(--mv-transition-timing-function);
 }
 
 svg.zigzag polygon.zig {
