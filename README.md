@@ -9,7 +9,7 @@ Install as a git dependency:
 ```json
 {
   "dependencies": {
-    "metervara-styles": "git+https://github.com/metervara/metervara-styles.git#v1.0.0"
+    "@metervara/metervara-styles": "git+https://github.com/metervara/metervara-styles.git#v1.0.0"
   }
 }
 ```
@@ -17,7 +17,7 @@ Install as a git dependency:
 Then import the main stylesheet in your project:
 
 ```css
-@import "metervara-styles/css/index.css";
+@import "@metervara/metervara-styles/css/index.css";
 ```
 
 ## Usage
