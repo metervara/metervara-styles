@@ -1,6 +1,6 @@
 {
   "name": "@metervara/metervara-styles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared CSS tokens, themes and cursors",
   "style": "css/index.css",
   "files": [
