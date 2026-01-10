@@ -13,20 +13,6 @@
   --mv-line-height-headline-large: 1.1;
 }
 
-@media (max-width: 768px) {
-  :root,
-  [data-theme] {
-    --mv-font-size-small: 2.5vw;
-  }
-}
-
-@media (max-width: 579px) {
-  :root,
-  [data-theme] {
-    --mv-font-size-small: 3vw;
-  }
-}
-
 html {
   font-size: 100%;
 }
