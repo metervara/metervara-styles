@@ -30,18 +30,35 @@
 }
 
 /* Article layout constraints */
+/* Article layout constraints */
 [data-content="article"] header,
 [data-content="article"] main,
 [data-content="article"] footer {
-  max-width: 42rem; /* ~672px - optimal reading width */
+  max-width: 42.5rem;   /* 680px */
   width: 100%;
-  padding-inline: var(--mv-space-5);
+  margin-inline: auto;  /* center the column */
+  padding-inline: 0;    /* no padding on wide screens */
+}
+
+/* Mobile / narrow screens: add gutter so text doesn't touch edges */
+@media (max-width: 43.75rem) {
+  [data-content="article"] header,
+  [data-content="article"] main,
+  [data-content="article"] footer {
+    padding-inline: 1rem; /* or var(--mv-space-4) */
+  }
 }
 
 [data-content="article"] main,
 [data-content="article"] footer {
   gap: var(--mv-space-6);
   padding-block: var(--mv-space-6);
+}
+
+/* Prevent double padding when header/footer are nested inside main */
+[data-content="article"] main header,
+[data-content="article"] main footer {
+  padding-inline: 0;
 }
 
 /* Heading hierarchy for documents */
@@ -52,6 +69,7 @@
 
 [data-content="article"] h2 {
   font-size: 1.75rem;
+  font-weight: 600;
   margin-block-start: var(--mv-space-6);
   margin-block-end: var(--mv-space-3);
 }
@@ -91,6 +109,13 @@
   margin-block: var(--mv-space-6);
 }
 
+/* Zigzag SVG in article mode - smaller to match content width */
+[data-content="article"] svg.zigzag {
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
 /* Mobile adjustments for article mode */
 @media (max-width: 479px) {
   [data-content="article"] {
@@ -102,5 +127,11 @@
   [data-content="article"] main,
   [data-content="article"] footer {
     padding-inline: var(--mv-space-4);
+  }
+
+  /* Prevent double padding when header/footer are nested inside main */
+  [data-content="article"] main header,
+  [data-content="article"] main footer {
+    padding-inline: 0;
   }
 }
