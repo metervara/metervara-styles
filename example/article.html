@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="metervara" data-content="article" data-cursor="metervara">
+<html lang="en" data-theme="metervara" data-content="article">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="../css/index.css" />
   </head>
 
-  <!-- data-cursor-scope activates custom cursor behavior inside -->
-  <body data-cursor-scope>
+  <body>
     <header>
-      <h1><span>Metervara styles.</span></h1>
+      <h1><span>Metervara styles: Article Mode.</span></h1>
     </header>
     <svg
       class="zigzag"
@@ -73,7 +72,32 @@
           aliquip ex ea commodo consequat.
         </p>
       </section>
-
+      <svg
+      class="zigzag"
+      viewBox="0 0 400 20"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern
+          id="zig-pattern"
+          patternUnits="userSpaceOnUse"
+          width="40"
+          height="20"
+        >
+          <!-- zig -->
+          <polygon
+            points="0,10 20,0 20,10 0,20"
+            class="zig"
+          />
+          <polygon
+            points="20,0 40,10 40,20 20,10"
+            class="zag"
+          />
+        </pattern>
+      </defs>
+      <rect width="400" height="20" fill="url(#zig-pattern)" />
+    </svg>
       <section data-theme-mode="dark">
         <h2 class="eyebrow" id="dark-mode-override"><span>Dark Mode Override.</span></h2>
         <p>

@@ -42,10 +42,16 @@
 
 /* Mobile / narrow screens: add gutter so text doesn't touch edges */
 @media (max-width: 43.75rem) {
-  [data-content="article"] header,
-  [data-content="article"] main,
-  [data-content="article"] footer {
-    padding-inline: 1rem; /* or var(--mv-space-4) */
+  /* Apply padding to all direct children instead of container */
+  [data-content="article"] header > *,
+  [data-content="article"] main > *,
+  [data-content="article"] footer > * {
+    padding-inline: 1rem;
+  }
+
+  /* Zigzag SVGs extend to edge on mobile */
+  [data-content="article"] svg.zigzag {
+    padding-inline: 0;
   }
 }
 
@@ -123,10 +129,16 @@
     --mv-font-size-headline-large: 2rem;
   }
 
-  [data-content="article"] header,
-  [data-content="article"] main,
-  [data-content="article"] footer {
+  /* Apply padding to all direct children instead of container */
+  [data-content="article"] header > *,
+  [data-content="article"] main > *,
+  [data-content="article"] footer > * {
     padding-inline: var(--mv-space-4);
+  }
+
+  /* Zigzag SVGs extend to edge on mobile */
+  [data-content="article"] svg.zigzag {
+    padding-inline: 0;
   }
 
   /* Prevent double padding when header/footer are nested inside main */
