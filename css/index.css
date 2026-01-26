@@ -8,6 +8,8 @@
 @import "./cursors/core.css";
 @import "./cursors/metervara.css";
 
+@import "./content/article.css";
+
 /* Specific theme styles */
 /* TODO: Move to a separate file */
 button.link-button {
