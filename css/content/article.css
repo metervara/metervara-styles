@@ -41,7 +41,7 @@
 [data-content="article"] header,
 [data-content="article"] section,
 [data-content="article"] footer {
-  padding-inline: var(--mv-space-5);   
+  padding-inline: 2rem; /*  var(--mv-space-6);   */
 }
 
 [data-content="article"] main {
@@ -88,9 +88,9 @@
   margin-block-end: var(--mv-space-3);
 }
 
-/* [data-content="article"] section p:last-child {
-  margin-block-end: var(--mv-space-1);
-} */
+[data-content="article"] section p:last-child {
+  margin-block-end: var(--mv-space-2);
+}
 
 /* --------- LISTS --------- */
 [data-content="article"] ul,
@@ -162,7 +162,7 @@
   [data-content="article"] header,
   [data-content="article"] section,
   [data-content="article"] footer {
-    padding-inline: var(--mv-space-4);   
+    padding-inline: 1rem;   
   }
 
   /* Overrides default spacing setting */
