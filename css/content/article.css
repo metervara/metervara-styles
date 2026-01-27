@@ -149,6 +149,7 @@
   [data-content="article"] {
 
     --space-shrink: 0.25rem;
+  }
 }
 
 @media (max-width: 479px) {
