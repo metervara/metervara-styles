@@ -88,9 +88,9 @@
   margin-block-end: var(--mv-space-3);
 }
 
-[data-content="article"] section p:last-child {
+/* [data-content="article"] section p:last-child {
   margin-block-end: var(--mv-space-1);
-}
+} */
 
 /* --------- LISTS --------- */
 [data-content="article"] ul,
