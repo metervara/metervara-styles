@@ -13,16 +13,17 @@
   --mv-line-height-headline-large: 1.2;
 
   /* Fixed spacing scale (rem instead of vw) */
-  --mv-space-1: 0.25rem;
-  --mv-space-2: 0.5rem;
-  --mv-space-3: 0.75rem;
-  --mv-space-4: 1rem;
-  --mv-space-5: 1.5rem;
-  --mv-space-6: 2rem;
-  --mv-space-7: 3rem;
-  --mv-space-8: 4rem;
-  --mv-space-9: 5rem;
-  --mv-space-10: 6rem;
+  --space-shrink: 0rem;
+  --mv-space-1: max(0rem,calc(0.25rem - var(--space-shrink)));
+  --mv-space-2: max(0rem, calc(0.5rem - var(--space-shrink)));
+  --mv-space-3: max(0rem, calc(0.75rem - var(--space-shrink)));
+  --mv-space-4: max(0rem, calc(1rem - var(--space-shrink)));
+  --mv-space-5: max(0rem, calc(1.5rem - var(--space-shrink)));
+  --mv-space-6: max(0rem, calc(2rem - var(--space-shrink)));
+  --mv-space-7: max(0rem, calc(3rem - var(--space-shrink)));
+  --mv-space-8: max(0rem, calc(4rem - var(--space-shrink)));
+  --mv-space-9: max(0rem, calc(5rem - var(--space-shrink)));
+  --mv-space-10: max(0rem, calc(6rem - var(--space-shrink)));
 
   /* Smaller decorative elements */
   --mv-dash-thickness: 0.25rem;
@@ -33,14 +34,14 @@
 [data-content="article"] header,
 [data-content="article"] main,
 [data-content="article"] footer {
-  max-width: 43.75rem;
+  max-width: 44rem;
   width: 100%;
   margin-inline: auto;
 }
 [data-content="article"] header,
 [data-content="article"] section,
 [data-content="article"] footer {
-  padding-inline: var(--mv-space-4);    /* no padding on wide screens */
+  padding-inline: var(--mv-space-5);   
 }
 
 [data-content="article"] main {
@@ -61,8 +62,13 @@
   margin-block-end: var(--mv-space-3);
 }
 
+[data-content="article"] h2:first-child {
+  margin-block-start: 0;
+}
+
 [data-content="article"] h3 {
   font-size: 1.25rem;
+  font-weight: 600;
   margin-block-start: var(--mv-space-5);
   margin-block-end: var(--mv-space-2);
 }
@@ -71,11 +77,22 @@
 [data-content="article"] h5,
 [data-content="article"] h6 {
   font-size: 1.125rem;
+  font-weight: 600;
   margin-block-start: var(--mv-space-4);
   margin-block-end: var(--mv-space-2);
 }
 
-  /* --------- LISTS --------- */
+/* --------- P --------- */
+[data-content="article"] p {
+  margin-block-start: 0;
+  margin-block-end: var(--mv-space-3);
+}
+
+[data-content="article"] section p:last-child {
+  margin-block-end: var(--mv-space-1);
+}
+
+/* --------- LISTS --------- */
 [data-content="article"] ul,
 [data-content="article"] ol {
   padding-inline-start: var(--mv-space-5);
@@ -86,14 +103,38 @@
   margin-block-end: var(--mv-space-2);
 }
 
-[data-content="article"] li:last-child {
-  margin-block-end: 0;
+/* --------- IMAGES --------- */
+[data-content="article"] img {
+  max-width: 100%;
+  height: auto;
+  margin-block: var(--mv-space-4);
+}
+
+[data-content="article"] figure img {
+  max-width: 100%;
+  height: auto;
+  margin-block: 0;
+}
+
+[data-content="article"] figure {
+  margin-block: var(--mv-space-4);
+}
+
+[data-content="article"] figcaption {
+  font-size: var(--mv-font-size-small);
+  font-style: italic;
 }
 
 /* --------- HR --------- */
 [data-content="article"] hr {
   width: 100%;
   margin-block: var(--mv-space-6);
+}
+
+/* --------- CODE BLOCK --------- */
+[data-content="article"] pre {
+  padding: var(--mv-space-3);
+  background-color: var(--mv-color-accent-2-bg);
 }
 
 /* --------- ZIGZAG SVG --------- */
@@ -104,39 +145,28 @@
 }
 
 /* --------- BREAKPOINTS --------- */
-@media (max-width: 43.75rem) {
-  [data-content="article"] header,
-  [data-content="article"] section,
-  [data-content="article"] footer {
-    padding-inline: var(--mv-space-4);
-  }
+@media (max-width: 44rem) {
+  [data-content="article"] {
 
-  [data-content="article"] main {
-    gap: var(--mv-space-4);
-    padding-block: var(--mv-space-4);
-  }
+    --space-shrink: 0.25rem;
 }
-
 
 @media (max-width: 479px) {
   [data-content="article"] {
     --mv-font-size-root: 1rem;
     --mv-font-size-headline-large: 2rem;
+    --space-shrink: 0.5rem;
   }
 
   [data-content="article"] header,
   [data-content="article"] section,
   [data-content="article"] footer {
-    padding-inline: var(--mv-space-2);
+    padding-inline: var(--mv-space-4);   
   }
 
+  /* Overrides default spacing setting */
   [data-content="article"] main {
     padding-inline: 0;
-  }
-
-  [data-content="article"] main {
-    gap: var(--mv-space-2);
-    padding-block: var(--mv-space-2);
   }
 }
 
