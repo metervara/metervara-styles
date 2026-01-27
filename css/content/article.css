@@ -38,10 +38,13 @@
   width: 100%;
   margin-inline: auto;
 }
-[data-content="article"] header,
-[data-content="article"] section,
-[data-content="article"] footer {
-  padding-inline: 2rem; /*  var(--mv-space-6);   */
+[data-content="article"] section {
+  padding-inline: 2rem;
+}
+
+/* Use .mv-inset on wrapper elements inside header/footer for aligned content (zigzag etc. stay full width) */
+[data-content="article"] .mv-inset {
+  padding-inline: 2rem;
 }
 
 [data-content="article"] main {
@@ -159,10 +162,9 @@
     --space-shrink: 0.5rem;
   }
 
-  [data-content="article"] header,
   [data-content="article"] section,
-  [data-content="article"] footer {
-    padding-inline: 1rem;   
+  [data-content="article"] .mv-inset {
+    padding-inline: 1rem;
   }
 
   /* Overrides default spacing setting */
