@@ -167,6 +167,12 @@
     padding-inline: 1rem;
   }
 
+  [data-content="article"] header,
+  [data-content="article"] main,
+  [data-content="article"] footer {
+    padding-inline: 0;
+  }
+
   /* Overrides default spacing setting */
   [data-content="article"] main {
     padding-inline: 0;
