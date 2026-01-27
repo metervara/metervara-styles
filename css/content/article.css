@@ -29,45 +29,26 @@
   --mv-dash-width: 1rem;
 }
 
-/* Article layout constraints */
-/* Article layout constraints */
+/* --------- LAYOUT --------- */
 [data-content="article"] header,
 [data-content="article"] main,
 [data-content="article"] footer {
-  max-width: 42.5rem;   /* 680px */
+  max-width: 43.75rem;
   width: 100%;
-  margin-inline: auto;  /* center the column */
-  padding-inline: 0;    /* no padding on wide screens */
+  margin-inline: auto;
 }
-
-/* Mobile / narrow screens: add gutter so text doesn't touch edges */
-@media (max-width: 43.75rem) {
-  /* Apply padding to all direct children instead of container */
-  [data-content="article"] header > *,
-  [data-content="article"] main > *,
-  [data-content="article"] footer > * {
-    padding-inline: 1rem;
-  }
-
-  /* Zigzag SVGs extend to edge on mobile */
-  [data-content="article"] svg.zigzag {
-    padding-inline: 0;
-  }
-}
-
-[data-content="article"] main,
+[data-content="article"] header,
+[data-content="article"] section,
 [data-content="article"] footer {
+  padding-inline: var(--mv-space-4);    /* no padding on wide screens */
+}
+
+[data-content="article"] main {
   gap: var(--mv-space-6);
   padding-block: var(--mv-space-6);
 }
 
-/* Prevent double padding when header/footer are nested inside main */
-[data-content="article"] main header,
-[data-content="article"] main footer {
-  padding-inline: 0;
-}
-
-/* Heading hierarchy for documents */
+/* --------- HEADINGS --------- */
 [data-content="article"] h1 {
   font-size: var(--mv-font-size-headline-large);
   margin-block-end: var(--mv-space-4);
@@ -94,7 +75,7 @@
   margin-block-end: var(--mv-space-2);
 }
 
-/* Lists in article mode */
+  /* --------- LISTS --------- */
 [data-content="article"] ul,
 [data-content="article"] ol {
   padding-inline-start: var(--mv-space-5);
@@ -109,41 +90,53 @@
   margin-block-end: 0;
 }
 
-/* HR in article mode */
+/* --------- HR --------- */
 [data-content="article"] hr {
   width: 100%;
   margin-block: var(--mv-space-6);
 }
 
-/* Zigzag SVG in article mode - smaller to match content width */
+/* --------- ZIGZAG SVG --------- */
 [data-content="article"] svg.zigzag {
   width: 100%;
-  max-width: 42rem;
+  max-width: 43.75rem;
   margin-inline: auto;
 }
 
-/* Mobile adjustments for article mode */
+/* --------- BREAKPOINTS --------- */
+@media (max-width: 43.75rem) {
+  [data-content="article"] header,
+  [data-content="article"] section,
+  [data-content="article"] footer {
+    padding-inline: var(--mv-space-4);
+  }
+
+  [data-content="article"] main {
+    gap: var(--mv-space-4);
+    padding-block: var(--mv-space-4);
+  }
+}
+
+
 @media (max-width: 479px) {
   [data-content="article"] {
     --mv-font-size-root: 1rem;
     --mv-font-size-headline-large: 2rem;
   }
 
-  /* Apply padding to all direct children instead of container */
-  [data-content="article"] header > *,
-  [data-content="article"] main > *,
-  [data-content="article"] footer > * {
-    padding-inline: var(--mv-space-4);
+  [data-content="article"] header,
+  [data-content="article"] section,
+  [data-content="article"] footer {
+    padding-inline: var(--mv-space-2);
   }
 
-  /* Zigzag SVGs extend to edge on mobile */
-  [data-content="article"] svg.zigzag {
+  [data-content="article"] main {
     padding-inline: 0;
   }
 
-  /* Prevent double padding when header/footer are nested inside main */
-  [data-content="article"] main header,
-  [data-content="article"] main footer {
-    padding-inline: 0;
+  [data-content="article"] main {
+    gap: var(--mv-space-2);
+    padding-block: var(--mv-space-2);
   }
 }
+
