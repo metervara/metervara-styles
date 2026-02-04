@@ -34,7 +34,7 @@
 [data-content="article"] header,
 [data-content="article"] main,
 [data-content="article"] footer {
-  max-width: 44rem;
+  max-width: 46.5rem;
   width: 100%;
   margin-inline: auto;
 }
@@ -143,12 +143,12 @@
 /* --------- ZIGZAG SVG --------- */
 [data-content="article"] svg.zigzag {
   width: 100%;
-  max-width: 43.75rem;
+  max-width: 46.25rem;
   margin-inline: auto;
 }
 
 /* --------- BREAKPOINTS --------- */
-@media (max-width: 44rem) {
+@media (max-width: 46.5rem) {
   [data-content="article"] {
 
     --space-shrink: 0.25rem;
