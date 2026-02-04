@@ -6,5 +6,10 @@
   "files": [
     "css",
     "assets"
-  ]
+  ],
+  "exports": {
+    ".": "./css/index.css",
+    "./favicons/*": "./assets/favicons/*",
+    "./favicons": "./assets/favicons"
+  }
 }
